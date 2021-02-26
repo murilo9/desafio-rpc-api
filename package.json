@@ -8,6 +8,7 @@
     "express": "^4.17.1"
   },
   "scripts": {
-    "serve": "node src"
+    "serve": "node src",
+    "start": "node src"
   }
 }
