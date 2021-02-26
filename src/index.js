@@ -1,7 +1,10 @@
 const express = require('express')
-const app = express()
 const port = process.env.PORT || 8888
 const axios = require('axios')
+const cors = require('cors')
+
+const app = express()
+app.use(cors())
 
 const baseUrl = 'https://epg-api.video.globo.com/programmes/1337?date='
 
