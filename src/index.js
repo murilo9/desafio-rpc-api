@@ -9,7 +9,7 @@ app.use(cors())
 const baseUrl = 'https://epg-api.video.globo.com/programmes/1337?date='
 
 app.get('/', (req, res) => {
-  const now = '2021-02-25'
+  const now = req.query.date
   axios.get(baseUrl + now).then(response => {
     res.status(200).send(response.data)
   })
