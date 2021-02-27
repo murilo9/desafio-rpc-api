@@ -6,7 +6,7 @@ const cors = require('cors')
 const app = express()
 
 const corsOptions = {
-  origin: 'https://murilo9.github.io/desafio-rpc-front',
+  origin: 'https://murilo9.github.io',
 }
 
 const baseUrl = 'https://epg-api.video.globo.com/programmes/1337?date='
