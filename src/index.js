@@ -7,15 +7,11 @@ const app = express()
 
 const corsOptions = {
   origin: 'https://murilo9.github.io/desafio-rpc-front',
-  optionsSuccessStatus: 200,
-  methods: "GET"
 }
-
-app.use(cors())
 
 const baseUrl = 'https://epg-api.video.globo.com/programmes/1337?date='
 
-app.get('/', (req, res) => {
+app.get('/', cors(corsOptions), (req, res) => {
   const now = req.query.date
   axios.get(baseUrl + now).then(response => {
     res.status(200).send(response.data)
