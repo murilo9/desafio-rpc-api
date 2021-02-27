@@ -4,7 +4,14 @@ const axios = require('axios')
 const cors = require('cors')
 
 const app = express()
-app.use(cors())
+
+const corsOptions = {
+  origin: 'https://murilo9.github.io/desafio-rpc-front',
+  optionsSuccessStatus: 200,
+  methods: "GET"
+}
+
+app.use(cors(corsOptions))
 
 const baseUrl = 'https://epg-api.video.globo.com/programmes/1337?date='
 
