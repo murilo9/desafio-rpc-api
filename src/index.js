@@ -11,7 +11,7 @@ const corsOptions = {
   methods: "GET"
 }
 
-app.use(cors(corsOptions))
+app.use(cors())
 
 const baseUrl = 'https://epg-api.video.globo.com/programmes/1337?date='
 
